@@ -1,3 +1,12 @@
+# Generated pipeline artifacts (re-created by `python main.py pipeline`)
+data/chunks/
+data/embeddings/
+data/extracted_text.txt
+data/app.db
+
+# do not upload the github readme
+githubreadme.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -4,17 +4,18 @@ import faiss
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 
+from src.retriever import HybridRetriever
+
 EMBED_MODEL = "all-MiniLM-L6-v2"
 # GROQ_MODEL = "llama3-8b-8192"
-GROQ_MODEL='llama-3.1-8b-instant'
-TOP_K = 5
+GROQ_MODEL = 'llama-3.1-8b-instant'
 SYSTEM_PROMPT = (
     "You are a helpful assistant that answers questions about Tamil Nadu traffic rules. "
     "Use only the provided context to answer. If the answer is not in the context, say so clearly."
 )
 
 
-def load_resources(embeddings_dir: str, chunks_dir: str) -> tuple[faiss.IndexFlatL2, list[str], SentenceTransformer]:
+def load_resources(embeddings_dir: str, chunks_dir: str) -> HybridRetriever:
     index = faiss.read_index(os.path.join(embeddings_dir, "faiss_index.bin"))
 
     chunk_files = sorted(
@@ -26,14 +27,9 @@ def load_resources(embeddings_dir: str, chunks_dir: str) -> tuple[faiss.IndexFla
             chunks.append(f.read())
 
     model = SentenceTransformer(EMBED_MODEL)
-    print(f"[chatbot] Loaded {index.ntotal} vectors, {len(chunks)} chunks.")
-    return index, chunks, model
-
-
-def retrieve(query: str, index: faiss.IndexFlatL2, chunks: list[str], model: SentenceTransformer, top_k: int = TOP_K) -> list[str]:
-    query_vec = model.encode([query]).astype(np.float32)
-    _, indices = index.search(query_vec, top_k)
-    return [chunks[i] for i in indices[0] if i < len(chunks)]
+    retriever = HybridRetriever(chunks, index, model, alpha=0.5)
+    print(f"[chatbot] HybridRetriever ready — {len(chunks)} chunks, alpha=0.5")
+    return retriever
 
 
 def ask_groq(query: str, context_chunks: list[str], client: Groq) -> str:
@@ -51,12 +47,11 @@ def ask_groq(query: str, context_chunks: list[str], client: Groq) -> str:
 
 
 def run_chatbot(embeddings_dir: str, chunks_dir: str, groq_api_key: str) -> None:
-    print("\nLoading resources, please wait...")
-    index, chunks, model = load_resources(embeddings_dir, chunks_dir)
+    retriever = load_resources(embeddings_dir, chunks_dir)
     client = Groq(api_key=groq_api_key)
 
     print("\n" + "=" * 50)
-    print("  TN Traffic Rules Assistant")
+    print("  TN Traffic Rules Assistant (Hybrid Search)")
     print("  Type 'quit' or 'exit' to stop.")
     print("=" * 50 + "\n")
 
@@ -73,6 +68,6 @@ def run_chatbot(embeddings_dir: str, chunks_dir: str, groq_api_key: str) -> None
             print("Goodbye!")
             break
 
-        relevant = retrieve(query, index, chunks, model)
+        relevant = retriever.retrieve(query)
         answer = ask_groq(query, relevant, client)
         print(f"\nAssistant: {answer}\n")

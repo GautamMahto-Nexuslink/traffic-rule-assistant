@@ -43,7 +43,7 @@ PIPELINE_READY = (
 @st.cache_resource(show_spinner="Loading knowledge base…")
 def load_rag():
     from src.chatbot import load_resources
-    return load_resources(EMBEDDINGS_DIR, CHUNKS_DIR)
+    return load_resources(EMBEDDINGS_DIR, CHUNKS_DIR)  # returns HybridRetriever
 
 
 @st.cache_resource
@@ -197,10 +197,10 @@ else:
         # Generate & show assistant reply
         with st.chat_message("assistant"):
             with st.spinner("Thinking…"):
-                from src.chatbot import retrieve, ask_groq
-                index, chunks, model = load_rag()
+                from src.chatbot import ask_groq
+                retriever = load_rag()
                 client = get_groq_client()
-                relevant = retrieve(prompt, index, chunks, model)
+                relevant = retriever.retrieve(prompt)
                 answer = ask_groq(prompt, relevant, client)
             st.markdown(answer)
 
