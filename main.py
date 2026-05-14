@@ -16,7 +16,7 @@ EMBEDDINGS_DIR = DATA_DIR / "embeddings"
 
 def run_pipeline() -> None:
     from src.extractor import extract_text_from_pdf
-    from src.chunker import chunk_text, save_chunks
+    from src.chunker import semantic_chunk, save_chunks
     from src.embedder import load_chunks, create_embeddings, build_faiss_index, save_artifacts
 
     print("=" * 50)
@@ -25,11 +25,11 @@ def run_pipeline() -> None:
     extract_text_from_pdf(str(PDF_PATH), str(TEXT_PATH))
 
     print("\n" + "=" * 50)
-    print("Step 2: Chunking extracted text")
+    print("Step 2: Semantic chunking")
     print("=" * 50)
     with open(TEXT_PATH, "r", encoding="utf-8") as f:
         text = f.read()
-    chunks = chunk_text(text)
+    chunks = semantic_chunk(text)
     save_chunks(chunks, str(CHUNKS_DIR))
 
     print("\n" + "=" * 50)
