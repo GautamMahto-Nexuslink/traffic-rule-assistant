@@ -1,0 +1,5 @@
+15.1.2 Mobile Applications 
+●​ mParivahan: Official mobile app for services and safety information. 
+●​ DigiLocker: Digital document storage (RC, DL). 
+●​ Challan Payment: Mobile payment options via UPI, digital wallets. 
+●​ Road Safety: Safety information and tips.

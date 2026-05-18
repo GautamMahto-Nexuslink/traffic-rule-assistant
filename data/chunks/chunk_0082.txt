@@ -1,0 +1,3 @@
+Check for pedestrians, cyclists or other vehicles before
+merging into the traffic and merge only when it is safe to do
+so.

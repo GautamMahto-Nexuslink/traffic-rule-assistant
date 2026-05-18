@@ -1,7 +1,8 @@
 # Generated pipeline artifacts (re-created by `python main.py pipeline`)
 data/chunks/
 data/embeddings/
-data/extracted_text.txt
+data/extracted/
+data/uploads/
 data/app.db
 
 # do not upload the github readme

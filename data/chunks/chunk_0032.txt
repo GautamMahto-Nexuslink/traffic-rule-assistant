@@ -1,8 +1,1 @@
-6.1.2 Commercial Licenses 
-●​ Class LMV: Light Motor Vehicle (taxis, auto-rickshaws). 
-●​ Class MGV: Medium Goods Vehicle. 
-●​ Class HGV: Heavy Goods Vehicle. 
-●​ Class PSV: Public Service Vehicle (buses). 
-●​ Class TRANS: Transport Vehicle License. 
-●​ Class HGMV: Heavy Goods and Medium Goods Vehicle. 
-●​ Class HPMV: Heavy Passenger Motor Vehicle.
+6.8 STOPPING

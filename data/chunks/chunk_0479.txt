@@ -1,0 +1,12 @@
+19.3 Traffic Police Stations in Major Cities 
+●​ Chennai: 
+○​ Mylapore: Address: Mylapore, Chennai; Phone: 044-2499-5020 
+○​ Egmore: Address: Egmore, Chennai; Phone: 044-2819-2334 
+○​ Anna Nagar: Address: Anna Nagar, Chennai; Phone: 044-2615-4567 
+○​ Adyar: Address: Adyar, Chennai; Phone: 044-2441-0987 
+●​ Coimbatore: 
+○​ Race Course: Address: Race Course Road, Coimbatore; Phone: 0422-222-3456 
+○​ Town Hall: Address: Town Hall, Coimbatore; Phone: 0422-233-4567 
+●​ Madurai: 
+○​ Periyar: Address: Periyar Bus Stand, Madurai; Phone: 0452-234-5678 
+○​ Anna Nagar: Address: Anna Nagar, Madurai; Phone: 0452-245-6789

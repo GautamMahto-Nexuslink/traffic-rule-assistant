@@ -1,0 +1,5 @@
+15.2.2 Challan Generation 
+●​ Automatic Generation: System-generated challans. 
+●​ Photo Evidence: Violation photographs. 
+●​ Digital Signature: Authenticated challans. 
+●​ Instant Delivery: SMS and email notifications.

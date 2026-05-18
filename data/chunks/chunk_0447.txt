@@ -1,0 +1,5 @@
+15.2.1 Automated Detection 
+●​ Speed Cameras: Automatic speed violation detection. 
+●​ Red Light Cameras: Traffic signal violation detection. 
+●​ ANPR Systems: Number plate recognition. 
+●​ Mobile Enforcement: Handheld devices for officers.

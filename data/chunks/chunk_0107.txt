@@ -1,0 +1,44 @@
+* you are aware of other road users.
+6.8. Stopping
+Indicate your intention to stop to other drivers before you stop or
+slow down, and do not brake suddenly.
+Even when driver is alert and the road and vehicle conditions are
+ideal, it takes some distance to bring a vehicle to complete stop.
+You can prevent crashing into another vehicle with good
+judgment and understanding of stopping distances. To bring a
+vehicle to stop:
+
+e You need to see the danger or the need to stop,
+
+« You must press the brake paddle to stop the vehicle.
+Time taken to perform the above steps is called the reaction time,
+which may further be affected by the road or weather conditions.
+The distance a vehicle travels during the reaction time is called
+the reaction distance. Once you apply brakes, the friction
+between tyres and the road comes into play to slow down and
+
+67
+
+finally stop the vehicle. The vehicle may travel some distance
+before it comes to a complete stop. This is called the braking
+distance. Braking distance depends upon the condition of the
+road and tyres, tyre pressure, vehicle weight, and the
+effectiveness of the braking system. The total stopping distance
+is the sum of the reaction distance and the braking distance:
+
+Stopping distance = Reaction distance + Braking distance
+
+For example, a vehicle travelling at 50 km/h, it will take around
+11 metres to react using an average reaction time of three-fourth
+of asecond (0.75 secs) for a normal, attentive driver. The braking
+distance for a vehicle running at 50 Km/h is around 14 metres.
+Therefore,
+
+Stopping distance = 11 + 14 = 25 metres.
+
+A vehicle travelling at higher speed will cover substantially longer
+distance before coming to a stop. Following diagram gives a good
+idea of how much distance is needed to stop a vehicle at different
+speeds on a dry level pavement.
+
+Vehicle speed | Reaction Distance | Braking Distance | Stopping Distance

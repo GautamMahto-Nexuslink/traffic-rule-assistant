@@ -1,14 +1,15 @@
 import os
-import numpy as np
+from typing import Generator
+
 import faiss
-from sentence_transformers import SentenceTransformer
 from groq import Groq
+from sentence_transformers import SentenceTransformer
 
 from src.retriever import HybridRetriever
 
 EMBED_MODEL = "all-MiniLM-L6-v2"
 # GROQ_MODEL = "llama3-8b-8192"
-GROQ_MODEL = 'llama-3.1-8b-instant'
+GROQ_MODEL = "llama-3.1-8b-instant"
 SYSTEM_PROMPT = (
     "You are a helpful assistant that answers questions about Tamil Nadu traffic rules. "
     "Use only the provided context to answer. If the answer is not in the context, say so clearly."
@@ -32,9 +33,10 @@ def load_resources(embeddings_dir: str, chunks_dir: str) -> HybridRetriever:
     return retriever
 
 
-def ask_groq(query: str, context_chunks: list[str], client: Groq) -> str:
+def ask_groq_stream(query: str, context_chunks: list[str], client: Groq) -> Generator[str, None, None]:
+    """Streams the answer token-by-token."""
     context = "\n\n---\n\n".join(context_chunks)
-    response = client.chat.completions.create(
+    stream = client.chat.completions.create(
         model=GROQ_MODEL,
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
@@ -42,8 +44,40 @@ def ask_groq(query: str, context_chunks: list[str], client: Groq) -> str:
         ],
         temperature=0.2,
         max_tokens=1024,
+        stream=True,
     )
-    return response.choices[0].message.content
+    for chunk in stream:
+        delta = chunk.choices[0].delta.content
+        if delta:
+            yield delta
+
+
+def ask_groq(query: str, context_chunks: list[str], client: Groq) -> str:
+    """Non-streaming version — used by the CLI chatbot."""
+    return "".join(ask_groq_stream(query, context_chunks, client))
+
+
+def generate_followups(query: str, answer: str, client: Groq) -> list[str]:
+    """Generate 3 short follow-up questions based on the Q&A exchange."""
+    try:
+        resp = client.chat.completions.create(
+            model=GROQ_MODEL,
+            messages=[{
+                "role": "user",
+                "content": (
+                    "Based on this Q&A about Tamil Nadu traffic rules, suggest 3 short "
+                    "follow-up questions the user might ask next.\n\n"
+                    f"Q: {query}\nA: {answer}\n\n"
+                    "Return only 3 questions, one per line, no numbering or bullets."
+                ),
+            }],
+            temperature=0.7,
+            max_tokens=150,
+        )
+        lines = resp.choices[0].message.content.strip().split("\n")
+        return [l.strip().lstrip("0123456789.-) ") for l in lines if l.strip()][:3]
+    except Exception:
+        return []
 
 
 def run_chatbot(embeddings_dir: str, chunks_dir: str, groq_api_key: str) -> None:

@@ -1,0 +1,5 @@
+8.2.1 First-Time Violations 
+●​ Minor Violations: Warning or minimal fine. 
+●​ Major Violations: Full penalty as prescribed. 
+●​ Safety Violations: Mandatory penalties without reduction. 
+●​ Document Violations: Grace period for production of documents.
