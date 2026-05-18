@@ -1,0 +1,6 @@
+4.1.3 Traffic Signals 
+●​ Red Light: Complete stop required; no right turn on red unless permitted by a signboard. 
+
+●​ Yellow Light: Prepare to stop, proceed only if stopping is unsafe. 
+●​ Green Light: Proceed with caution, checking for pedestrians and cross traffic. 
+●​ Flashing Signals: Proceed with extreme caution.

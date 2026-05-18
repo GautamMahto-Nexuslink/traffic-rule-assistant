@@ -1,0 +1,5 @@
+15.1.3 Integration Systems 
+●​ Aadhaar Integration: Biometric verification. 
+●​ Bank Integration: Direct payment systems. 
+●​ SMS Alerts: Transaction notifications. 
+●​ Email Services: Document delivery.

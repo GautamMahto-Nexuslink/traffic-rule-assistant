@@ -1,0 +1,124 @@
+4.1 Signs
+
+Road signs are published by Indian Road Congress (IRC) and use
+symbols and pictures. These are uniformly followed across the
+country. They are shape and color coded to give you a quick idea
+about what the sign says even before you are close enough to
+read it. Road signs are of three types:
+
+e Mandatory Signs
+
+¢ Cautionary Signs
+
+¢ Informatory Signs
+Mandatory Signs
+
+These signs are mandatory and must be followed at all times.
+Mandatory signs are circular, except the 'Stop' sign and the 'Give
+Way' sign. Mandatory signs are reproduced below for your quick
+reference.
+
+STOP SIGN
+
+This sign is used on roadways where traffic
+is required to stop before entering a major
+road or intersection.
+
+GIVE WAY SIGN
+
+You must give way to the other traffic
+having the right-of-way.
+
+NO ENTRY
+
+This sign is located at places where the
+entry of all vehicles in prohibited.
+
+0x6
+
+26
+
+STRAIGHT PROHIBITED OR NO ENTRY
+
+This sign is located at places where the
+vehicles are not allowed to enter or go
+straight.
+
+ONE WAY SIGN
+
+Vehicles prohibited in one direction.
+Indicates that traffic going forward is
+prohibited.
+
+ONE WAY SIGN
+
+Vehicles prohibited in one direction.
+Indicates that traffic going in the other
+direction is prohibited.
+
+VEHICLES PROHIBITED IN BOTH
+DIRECTIONS
+
+This sign is used where entry to all types of
+vehicular traffic is prohibited.
+
+@® ®
+
+ALL MOTOR VEHICLES TRUCKS PROHIBITED BULLOCK CARTS AND
+
+BHOOSS
+
+PROHIBITED HAND CARTS PROHIBITED
+BULLOCK CARTS TONGAS PROHIBITED HAND CARTS
+PROHIBITED PROHIBITED
+
+27
+
+eS
+9
+
+CYCLES PROHIBITED PEDESTRIANS RIGHT TURN
+PROHIBITED PROHIBITED
+
+&)
+co)
+©
+
+LEFT TURN U-TURN OVER TAKING
+PROHIBED PROHIBITED PROHIBITED
+
+®
+S
+ae
+
+HORN PROHIBITED NO PARKING NO STOPING OR
+STANDING
+
+©
+©
+©)
+
+SPEED LIMIT WIDTH LIMIT HEIGHT LIMIT
+
+®
+©
+©
+
+LENGTH LIMIT LOAD LIMIT AXLE LOAD LIMIT
+
+28
+
+O
+
+RESTRICTION COMPULSORY COMPULSORY
+ENDS TURN LEFT AHEAD ONLY
+
+oS
+
+COMPULSORY COMPULSORY AHEAD COMPULSORY AHEAD
+TURN RIGHT OR TURN RIGHT OR TURN LEFT
+
+COMPULSORY COMPULSORY COMPULSORY
+KEEP LEFT CYCLE TRACK SOUND HORN
+
+Cautionary Signs

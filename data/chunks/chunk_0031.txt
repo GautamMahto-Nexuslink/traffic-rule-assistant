@@ -1,5 +1,1 @@
-6.1.1 Non-Commercial Licenses 
-●​ Class LMV-NT: Light Motor Vehicle Non-Transport (private cars). 
-●​ Class MCWG: Motorcycle With Gear. 
-●​ Class MCWOG: Motorcycle Without Gear (scooters, mopeds). 
-●​ Class LMV-IVP: Light Motor Vehicle - Invalid Carriage.
+6.7 REVERSING.

@@ -1,0 +1,6 @@
+7.3 Digital Documentation 
+●​ DigiLocker Integration: 
+○​ Digital RC and DL accessible through DigiLocker. 
+○​ Validity: Digital copies accepted by traffic police. 
+
+○​ Security Features: QR codes and security features for verification.

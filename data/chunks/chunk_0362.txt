@@ -1,0 +1,8 @@
+7.5 Road Tax Rates 
+●​ Two-Wheeler: 
+○​ Up to 150cc: 6% of vehicle cost. 
+○​ Above 150cc: 8% of vehicle cost. 
+●​ Car: 
+○​ Up to 1200cc: 8% of vehicle cost. 
+○​ Above 1200cc: 10% of vehicle cost. 
+●​ Commercial Vehicles: Varies by category and tonnage.

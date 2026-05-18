@@ -1,0 +1,5 @@
+15.2.3 Payment Options 
+●​ Online Payment: Multiple payment gateways (parivahan.gov.in, tnpoliceonline.com). 
+●​ Mobile Payment: UPI and digital wallets. 
+●​ Bank Payment: Net banking, credit cards, bank challans. 
+●​ Physical Payment: Cash counters.

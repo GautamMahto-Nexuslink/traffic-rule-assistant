@@ -1,0 +1,7 @@
+19.4 Emergency Services 
+●​ Police: 100 
+●​ Fire Service: 101 
+●​ Ambulance: 108 
+●​ Integrated Emergency: 112 
+●​ Traffic Police Helpline: 103 
+●​ Women’s Helpline: 1091
